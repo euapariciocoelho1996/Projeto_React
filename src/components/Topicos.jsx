@@ -34,8 +34,8 @@ export default function TopicsGrid() {
       links: [
         { label: "Instalação", to: "/new-content" },
         { label: "Componentes", to: "/components-info" },
-        { label: "Props e State", url: "#" },
-        { label: "Hooks", url: "#" },
+        { label: "Props e State", to: "/props-state-info" },
+        { label: "Hooks", to: "/hooks-info" },
         { label: "Gerenciamento de Estado", url: "#" },
       ],
     },

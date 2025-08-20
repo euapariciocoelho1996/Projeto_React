@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import TopicsGrid from "./components/Topicos";
 import NewContent from "./components/NewContent";
 import ComponentsInfo from "./components/ComponentsInfo";
+import PropsStateInfo from "./components/PropsStateInfo";
+import HooksInfo from "./components/Hooks";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -26,6 +28,8 @@ function App() {
         />
         <Route path="/new-content" element={<NewContent />} />
         <Route path="/components-info" element={<ComponentsInfo />} />
+        <Route path="/props-state-info" element={<PropsStateInfo />} />
+        <Route path="/hooks-info" element={<HooksInfo />} />
       </Routes>
       <Footer /> {/* Fixo no fim */}
     </BrowserRouter>
