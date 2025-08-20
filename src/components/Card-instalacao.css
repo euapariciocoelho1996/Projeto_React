@@ -1,0 +1,152 @@
+/* Importando fonte */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* Container dos cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo dos cards */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Título e ícones */
+.card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Ícones de imagem */
+.card-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Ícones SVG */
+.card-icon-svg {
+  width: 28px;
+  height: 28px;
+  fill: #ccc;
+}
+
+/* Texto do card */
+.card p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+/* Links */
+.card a {
+  color: #38bdf8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Listas do passo a passo */
+.card ol {
+  margin: 0.5rem 0 0 1.2rem;
+  padding: 0;
+}
+
+.card ol li {
+  color: #cfcfcf;
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
+}
+
+/* Cores personalizadas */
+.node {
+  color: #68a063;
+}
+
+.vscode {
+  color: #0078d7;
+}
+
+.tailwind {
+  color: #38bdf8;
+}
+
+.prettier {
+  color: #f7b93e;
+}
+
+.eslint {
+  color: #4b32c3;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card h2 {
+    font-size: 1.05rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .card-icon,
+  .card-icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
+:root {
+  --bg: #0b0f12; /* muito escuro */
+  --muted: #9aa6b2;
+  --accent: #6c88ef; /* acento */
+}
+
+.header {
+  font-family: "Source Code Pro", monospace;
+  background-color: var(--bg);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  width: 100%; /* ocupa largura total */
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between; /* todo conteúdo central */
+  align-items: center;
+  gap: 2rem;
+  padding: 0.7rem 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand__logo img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 4px 14px rgba(108, 136, 239, 0.18));
+}
+
+.brand__text {
+  color: #e6eef9;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.nav {
+  margin-left: 1.4rem;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.nav__item a:hover {
+  color: #ffffff;
+  background: linear-gradient(
+    90deg,
+    rgba(108, 136, 239, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+/* Botão hambúrguer */
+.burger {
+  display: none; /* escondido por padrão */
+  background: transparent;
+  border: none;
+  padding: 0.4rem;
+  margin-left: 0.4rem;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 3px 0;
+  background: var(--muted);
+  border-radius: 2px;
+}
+
+/* mobile menu */
+.mobile-menu {
+  display: none;
+  background: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  padding: 0.8rem 1rem;
+}
+
+.mobile-menu--visible {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mobile-menu a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.6rem 0.6rem;
+  border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 880px) {
+  .nav {
+    display: none; /* esconde menu desktop */
+  }
+  .burger {
+    display: flex; /* aparece só em telas menores */
+  }
+}
+
+@media (min-width: 881px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* acessibilidade: foco */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(108, 136, 239, 0.18);
+  outline-offset: 2px;
+}

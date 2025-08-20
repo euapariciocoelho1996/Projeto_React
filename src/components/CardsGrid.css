@@ -1,0 +1,94 @@
+/* CardsGrid.css */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
+body {
+  font-family: "Source Code Pro", monospace;
+}
+
+/* Container dos cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; /* espaçamento entre cards */
+  padding: 2.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilo geral dos cards */
+.card {
+  background-color: #1a1a1a; /* tom escuro */
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Títulos dos cards */
+.card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+/* Parágrafos dos cards */
+.card p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.html {
+  color: rgb(245, 96, 16);
+}
+
+.Tail {
+  color: #38bdf8;
+}
+
+.js {
+  color: #f7df1e;
+}
+.rc {
+  color: #61dafb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* apenas 1 coluna */
+    padding: 1.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,108 @@
+/* TopicsGrid.css */
+
+/* Fundo estilo terminal */
+body {
+  background-color: #0d1117; /* escuro tipo GitHub Dark */
+  font-family: "Source Code Pro", monospace;
+  margin: 0;
+  padding: 0;
+  color: #e6edf3;
+}
+
+/* Container geral */
+.topics-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: nowrap; /* mantém scroll horizontal se precisar */
+  overflow-x: auto;
+  padding: 20px;
+
+  /* Centralizar cards */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: flex-start; /* alinha ao topo */
+}
+
+/* Título principal */
+.topics-container h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #ffffff; /* azul código */
+}
+
+/* Grid dos cards */
+.topics-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: nowrap; /* deixa cards lado a lado */
+  overflow-x: auto; /* scroll horizontal */
+  padding-bottom: 1rem;
+}
+
+/* Card individual */
+.topic-card {
+  background: #161b22; /* fundo escuro */
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-width: 250px;
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Título do card */
+.topic-card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+/* Lista de links */
+.topic-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links estilo código */
+.topic-card a {
+  color: #c9d1d9;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.topic-card a:hover {
+  color: #ffcc00; /* amarelo destaque */
+  text-shadow: 0 0 4px #ffcc00;
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  .topics-grid {
+    flex-wrap: wrap; /* permite que os cards quebrem linha */
+    justify-content: center; /* centraliza os cards */
+  }
+
+  .topic-card {
+    min-width: 80%; /* ocupa a maior parte da largura */
+    margin-bottom: 1rem; /* espaçamento entre os cards */
+  }
+}
+
+/* Para telas bem pequenas, abaixo de 480px */
+@media (max-width: 480px) {
+  .topic-card {
+    min-width: 95%; /* ocupa quase toda a largura */
+    padding: 1rem; /* reduz padding */
+  }
+
+  .topics-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
