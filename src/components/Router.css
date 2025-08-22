@@ -1,0 +1,145 @@
+/* Estilo principal do container */
+.aula-container {
+  background-color: #000000;
+  color: #f1f1f1;
+  font-family: "Source Code Pro", monospace;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+.aula-container h1 {
+  color: #61dafb;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Subtítulos */
+.aula-container h2 {
+  color: #00ffb3;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #00ffb3;
+  padding-bottom: 0.3rem;
+}
+
+/* Parágrafos */
+.aula-container p {
+  color: #e4e4e4;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/* Destaque para palavras importantes */
+.aula-container strong {
+  color: #ffcc00;
+}
+
+/* Bloco de código */
+.code-block {
+  background-color: #1e1e1e;
+  color: #00ff88;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  width: 90%;
+  max-width: 800px;
+  overflow-x: auto;
+  box-shadow: 0px 0px 12px rgba(0, 255, 136, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.code-block:hover {
+  transform: scale(1.02);
+}
+
+/* Lista ordenada e não ordenada */
+.aula-container ul,
+.aula-container ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.aula-container li {
+  margin-bottom: 0.5rem;
+}
+
+/* Cards para exemplos e explicações */
+.card {
+  background-color: #111111;
+  border: 1px solid #333333;
+  padding: 1rem 1.5rem;
+  margin: 1.2rem 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.08);
+  width: 90%;
+  max-width: 850px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 14px rgba(97, 218, 251, 0.3);
+}
+
+/* Links */
+.aula-container a {
+  color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.aula-container a:hover {
+  color: #00ffb3;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .aula-container {
+    padding: 1rem;
+  }
+
+  .code-block {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  .aula-container h1 {
+    font-size: 2rem;
+  }
+
+  .aula-container h2 {
+    font-size: 1.4rem;
+  }
+}
+
+.code-block {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+.code-block code {
+  white-space: pre;
+}

@@ -37,6 +37,7 @@ export default function TopicsGrid() {
         { label: "Props e State", to: "/props-state-info" },
         { label: "Hooks", to: "/hooks-info" },
         { label: "Gerenciamento de Estado", url: "#" },
+        { label: "React Router DOM", to: "/router-info" },
       ],
     },
   ];

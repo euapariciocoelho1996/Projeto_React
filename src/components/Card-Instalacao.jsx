@@ -23,7 +23,7 @@ const CardsGridInstalacao = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            nodejs.tech/pt-br/download
+            Download Node.js
           </a>
           .
         </p>
@@ -48,7 +48,7 @@ const CardsGridInstalacao = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            code.visualstudio.com/download
+            Download VSCode
           </a>
           .
         </p>
@@ -97,6 +97,61 @@ const CardsGridInstalacao = () => {
           <li>
             Agora, ao salvar, o Prettier formata e o ESLint verifica problemas
             automaticamente.
+          </li>
+        </ol>
+      </div>
+
+      {/* Card Git */}
+      <div className="card">
+        <h2>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            alt="Git Logo"
+            className="card-icon-svg"
+            style={{ width: "30px", marginRight: "8px" }}
+          />
+          Git - Controle de Versão
+        </h2>
+        <p>
+          O <strong>Git</strong> é um sistema de controle de versão distribuído
+          que ajuda desenvolvedores a gerenciar o histórico dos seus códigos,
+          trabalhar em equipe e acompanhar alterações de forma eficiente.
+        </p>
+        <p>
+          Para instalar o Git, acesse o site oficial:
+          <a
+            href="https://git-scm.com/downloads"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Git
+          </a>
+        </p>
+        <p>
+          <strong>Comandos básicos do Git:</strong>
+        </p>
+        <ol>
+          <li>
+            <code>git init</code> → Inicializa um novo repositório.
+          </li>
+          <li>
+            <code>git clone &lt;url&gt;</code> → Clona um repositório existente.
+          </li>
+          <li>
+            <code>git add .</code> → Adiciona todas as alterações para o próximo
+            commit.
+          </li>
+          <li>
+            <code>git commit -m mensagem</code> → Salva as alterações no
+            histórico.
+          </li>
+          <li>
+            <code>git push</code> → Envia as alterações para o repositório
+            remoto.
+          </li>
+          <li>
+            <code>git pull</code> → Atualiza o projeto com as últimas alterações
+            do remoto.
           </li>
         </ol>
       </div>
