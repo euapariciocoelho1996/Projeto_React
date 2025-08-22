@@ -8,6 +8,7 @@ import ComponentsInfo from "./components/ComponentsInfo";
 import PropsStateInfo from "./components/PropsStateInfo";
 import HooksInfo from "./components/Hooks";
 import RouterDomLesson from "./components/Router";
+import CompactSection from "./components/CompactSection";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/hooks-info" element={<HooksInfo />} />
         <Route path="/router-info" element={<RouterDomLesson />} />
       </Routes>
+      <CompactSection />
       <Footer /> {/* Fixo no fim */}
     </BrowserRouter>
   );
