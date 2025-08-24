@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
 /* Container principal */
 .components-container {
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -8,136 +10,7 @@
 
 /* Título */
 .components-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #61dafb; /* Cor oficial do React */
-}
-
-/* Subtítulo */
-.components-subtitle {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-/* Grid vertical */
-.components-grid {
-  display: flex;
-  flex-direction: column; /* Cards em coluna */
-  gap: 2rem; /* Espaço entre os cards */
-  margin-bottom: 2rem;
-  align-items: center; /* Centraliza os cards */
-}
-
-/* Cards mais largos */
-.component-card {
-  width: 90%; /* Largura maior */
-  max-width: 900px; /* Limite máximo */
-  background-color: #1a1a1a;
-  padding: 2rem;
-  border-radius: 12px;
-
-  text-align: left;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Título do card */
-.component-card h2 {
-  font-size: 1.5rem; /* Um pouco maior para destaque */
-  color: #61dafb;
-  margin-bottom: 0.5rem;
-}
-
-/* Texto */
-.component-card p,
-.component-card li {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem; /* Um pouco maior para melhor leitura */
-  line-height: 1.6;
-}
-
-/* Destaque de props e estados */
-.highlight {
-  color: #ff9800;
-  font-weight: bold;
-}
-
-.video-card {
-  width: 100%;
-  max-width: 900px;
-
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Blocos de código */
-.code-block {
-  background-color: #0d1117;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  overflow-x: auto;
-}
-
-/* Cores para trechos de código */
-.code-keyword {
-  color: #ff79c6;
-  font-weight: bold;
-}
-.code-function {
-  color: #61dafb;
-}
-.code-string {
-  color: #a5d6ff;
-}
-.code-tag {
-  color: #7ee787;
-}
-.code-prop {
-  color: #f78c6c;
-}
-.inline-code {
-  background-color: rgba(97, 218, 251, 0.15);
-  color: #61dafb;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: "Source Code Pro", monospace;
-}
-
-/* Botão "Aprender mais" */
-.components-footer {
-  margin-top: 2rem;
-}
-
-.learn-more {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
-  border-radius: 8px;
-  background-color: #61dafb;
-  color: #000;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-/* Responsividade */
-/* Container principal */
-.components-container {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Título */
-.components-title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #61dafb;
@@ -145,7 +18,7 @@
 
 /* Subtítulo */
 .components-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
   max-width: 700px;
   margin: 0 auto 2rem;
   color: rgba(255, 255, 255, 0.75);
@@ -155,7 +28,7 @@
 .components-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(1rem, 2vw, 2rem);
   margin-bottom: 2rem;
   align-items: center;
 }
@@ -165,9 +38,8 @@
   width: 90%;
   max-width: 900px;
   background-color: #1a1a1a;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   border-radius: 12px;
-
   text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -180,16 +52,16 @@
 
 /* Título do card */
 .component-card h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 2vw + 0.5rem, 1.5rem);
   color: #61dafb;
   margin-bottom: 0.5rem;
 }
 
-/* Texto */
+/* Texto e listas */
 .component-card p,
 .component-card li {
   color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1vw + 0.5rem, 1rem);
   line-height: 1.6;
 }
 
@@ -202,15 +74,15 @@
 /* Blocos de código */
 .code-block {
   background-color: #0d1117;
-  padding: 1rem;
+  padding: clamp(0.8rem, 1.5vw, 1rem);
   margin-top: 1rem;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 0.8vw + 0.5rem, 0.95rem);
   overflow-x: auto;
   box-shadow: inset 0 0 8px rgba(97, 218, 251, 0.1);
 }
 
-/* Cores para trechos de código */
+/* Cores de sintaxe */
 .code-keyword {
   color: #ff79c6;
   font-weight: bold;
@@ -227,6 +99,7 @@
 .code-prop {
   color: #f78c6c;
 }
+
 .inline-code {
   background-color: rgba(97, 218, 251, 0.15);
   color: #61dafb;
@@ -235,16 +108,15 @@
   font-family: "Source Code Pro", monospace;
 }
 
+/* Vídeo */
 .video-card {
   width: 100%;
   max-width: 900px;
-
   border-radius: 12px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Container do vídeo responsivo */
 .video-wrapper {
   position: relative;
   width: 100%;
@@ -265,44 +137,53 @@
 .components-footer {
   margin-top: 2rem;
 }
+
 .learn-more {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: clamp(0.5rem, 1vw, 0.8rem) clamp(1rem, 2vw, 1.5rem);
   font-weight: bold;
   border-radius: 8px;
   background-color: #61dafb;
   color: #000;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
 .learn-more:hover {
   background-color: #21a1f1;
+  transform: scale(1.05);
 }
 
-/* Responsividade para tablets */
+/* --- RESPONSIVIDADE --- */
+
+/* Tablets */
 @media (max-width: 900px) {
   .components-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
   }
   .components-subtitle {
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   }
   .component-card {
     width: 95%;
-    padding: 1.8rem;
+    padding: clamp(1rem, 2vw, 1.8rem);
   }
 }
 
-/* Responsividade para celulares pequenos */
+/* Celulares pequenos */
 @media (max-width: 600px) {
   .components-title {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 4vw, 2rem);
   }
   .components-subtitle {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
   }
   .component-card {
     width: 95%;
-    padding: 1.5rem;
+    padding: clamp(0.8rem, 1.5vw, 1.5rem);
+  }
+  .learn-more {
+    width: 100%;
+    text-align: center;
   }
 }

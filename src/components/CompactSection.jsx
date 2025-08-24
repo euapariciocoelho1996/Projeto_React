@@ -1,16 +1,23 @@
 import "./CompactSection.css";
+import { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // eslint-disable-next-line react/prop-types
 export default function CompactSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // duração da animação em ms
+  }, []);
   return (
     <section className="compact-section">
       <h2 className="section-title"></h2>
       <div className="section-card">
         <div>
-          <h2>
+          <h2 data-aos="fade-down-right" style={{ textAlign: "center" }}>
             SAIBA <span>MAIS!</span>
           </h2>
-          <p className="section-description">
+          <p className="section-description" data-aos="fade-up-left">
             Aprofunde seus conhecimentos com este vídeo sobre React!
           </p>
         </div>

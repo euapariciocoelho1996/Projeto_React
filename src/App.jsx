@@ -25,6 +25,7 @@ function App() {
 
               <CardsGrid />
               <TopicsGrid />
+              <CompactSection />
             </>
           }
         />
@@ -34,7 +35,6 @@ function App() {
         <Route path="/hooks-info" element={<HooksInfo />} />
         <Route path="/router-info" element={<RouterDomLesson />} />
       </Routes>
-      <CompactSection />
       <Footer /> {/* Fixo no fim */}
     </BrowserRouter>
   );

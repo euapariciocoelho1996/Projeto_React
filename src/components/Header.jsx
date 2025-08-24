@@ -1,5 +1,6 @@
 // Header.jsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
@@ -24,7 +25,7 @@ export default function Header() {
         <nav className="nav" aria-label="Navegação principal">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home">Início</a>
+              <Link to="/">Início</Link>
             </li>
             <li className="nav__item">
               <a href="#features">Recursos</a>

@@ -1,19 +1,22 @@
-/* Estilo principal do container */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
+/* Container principal */
 .aula-container {
   background-color: #000000;
   color: #f1f1f1;
   font-family: "Source Code Pro", monospace;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* Título principal */
 .aula-container h1 {
   color: #61dafb;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: bold;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -22,7 +25,7 @@
 /* Subtítulos */
 .aula-container h2 {
   color: #00ffb3;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   margin-top: 2rem;
   margin-bottom: 0.8rem;
   border-bottom: 2px solid #00ffb3;
@@ -32,14 +35,14 @@
 /* Parágrafos */
 .aula-container p {
   color: #e4e4e4;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1rem);
   line-height: 1.6;
   margin-bottom: 1rem;
   max-width: 800px;
   text-align: justify;
 }
 
-/* Destaque para palavras importantes */
+/* Destaque de palavras importantes */
 .aula-container strong {
   color: #ffcc00;
 }
@@ -47,15 +50,17 @@
 /* Bloco de código */
 .code-block {
   background-color: #1e1e1e;
-  color: #00ff88;
-  padding: 1rem;
+  color: #f5f5f5;
+  padding: clamp(0.8rem, 1.5vw, 1rem);
   border-radius: 8px;
-  font-size: 0.95rem;
   margin: 1rem 0;
+  font-family: "Source Code Pro", monospace;
+  font-size: clamp(0.85rem, 1vw + 0.5rem, 0.95rem);
   width: 90%;
   max-width: 800px;
   overflow-x: auto;
-  box-shadow: 0px 0px 12px rgba(0, 255, 136, 0.3);
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease;
 }
 
@@ -63,7 +68,15 @@
   transform: scale(1.02);
 }
 
-/* Lista ordenada e não ordenada */
+.code-block pre {
+  margin: 0;
+}
+
+.code-block code {
+  white-space: pre;
+}
+
+/* Listas */
 .aula-container ul,
 .aula-container ol {
   margin-left: 2rem;
@@ -74,11 +87,11 @@
   margin-bottom: 0.5rem;
 }
 
-/* Cards para exemplos e explicações */
+/* Cards de exemplos */
 .card {
   background-color: #111111;
   border: 1px solid #333333;
-  padding: 1rem 1.5rem;
+  padding: clamp(0.8rem, 1.5vw, 1.5rem) clamp(1rem, 2vw, 1.5rem);
   margin: 1.2rem 0;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.08);
@@ -102,44 +115,52 @@
   color: #00ffb3;
 }
 
-/* Responsividade */
+/* --- RESPONSIVIDADE --- */
+
+/* Tablets e notebooks */
+@media screen and (max-width: 1024px) {
+  .aula-container {
+    padding: 1.5rem;
+  }
+
+  .aula-container h1 {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+  }
+
+  .aula-container h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  }
+
+  .code-block {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Celulares e telas pequenas */
 @media screen and (max-width: 768px) {
   .aula-container {
     padding: 1rem;
   }
 
-  .code-block {
-    font-size: 0.85rem;
-    padding: 0.8rem;
-  }
-
   .aula-container h1 {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 5vw, 2rem);
   }
 
   .aula-container h2 {
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
   }
-}
 
-.code-block {
-  background-color: #1e1e1e;
-  color: #f5f5f5;
-  padding: 16px;
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: "Source Code Pro", monospace;
-  font-size: 14px;
-  overflow-x: auto;
-  border: 1px solid #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
+  .code-block {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
 
-.code-block pre {
-  margin: 0;
-}
+  .card {
+    padding: 0.7rem 1rem;
+  }
 
-.code-block code {
-  white-space: pre;
+  .aula-container p {
+    font-size: 0.9rem;
+  }
 }
