@@ -19,7 +19,7 @@ export default function Header() {
               height="32"
             />
           </div>
-          <span className="brand__text">Reactzinho</span>
+          <span className="brand__text">Reactzinho+</span>
         </div>
 
         <nav className="nav" aria-label="Navegação principal">
