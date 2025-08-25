@@ -23,7 +23,7 @@ export default function TopicsGrid() {
     {
       title: "JavaScript",
       links: [
-        { label: "Variáveis e Tipos", url: "#" },
+        { label: "Variáveis e Tipos", to: "/variaveis-js" },
         { label: "Funções", url: "#" },
         { label: "Eventos", url: "#" },
         { label: "DOM", url: "#" },
