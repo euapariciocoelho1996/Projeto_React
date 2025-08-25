@@ -2,6 +2,7 @@
 
 /* Fundo estilo terminal */
 body {
+  width: 100%;
   background-color: #0d1117; /* escuro tipo GitHub Dark */
   font-family: "Source Code Pro", monospace;
   margin: 0;

@@ -6,7 +6,7 @@
   --accent: #6c88ef;
 }
 
-/* Header principal */
+/* --- HEADER PRINCIPAL --- */
 .header {
   font-family: "Source Code Pro", monospace;
   background-color: var(--bg);
@@ -19,16 +19,18 @@
   box-sizing: border-box;
 }
 
-/* Conteúdo interno */
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: clamp(1rem, 2vw, 2rem);
   padding: clamp(0.5rem, 1vw, 0.7rem) clamp(0.8rem, 2vw, 1rem);
+
+  max-width: 100%; /* nunca ultrapassa o html */
+  box-sizing: border-box; /* padding conta dentro da largura */
 }
 
-/* Branding */
+/* --- BRANDING --- */
 .brand {
   display: flex;
   align-items: center;
@@ -48,7 +50,7 @@
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-/* Menu desktop */
+/* --- MENU DESKTOP --- */
 .nav {
   margin-left: clamp(1rem, 2vw, 1.4rem);
 }
@@ -79,7 +81,7 @@
   );
 }
 
-/* Botão hambúrguer */
+/* --- BOTÃO HAMBÚRGUER --- */
 .burger {
   display: none;
   background: transparent;
@@ -101,16 +103,24 @@
   border-radius: 2px;
 }
 
-/* Menu mobile */
+/* --- MENU MOBILE --- */
 .mobile-menu {
   display: none;
   background: rgba(255, 255, 255, 0.01);
   border-top: 1px solid rgba(255, 255, 255, 0.02);
   padding: clamp(0.6rem, 1vw, 0.8rem) clamp(0.8rem, 2vw, 1rem);
+
+  /* efeito suave */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .mobile-menu--visible {
   display: block;
+  max-height: 500px;
+  opacity: 1;
 }
 
 .mobile-menu ul {
@@ -129,6 +139,13 @@
   border-radius: 8px;
 }
 
+/* --- ACESSIBILIDADE --- */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(108, 136, 239, 0.18);
+  outline-offset: 2px;
+}
+
 /* --- RESPONSIVIDADE --- */
 
 /* Tablets e telas médias */
@@ -141,28 +158,72 @@
   }
 }
 
-/* Desktops grandes */
-@media (min-width: 881px) {
+/* Ajuste geral até 711px */
+@media (max-width: 711px) {
+  .header__inner {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .brand__text {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
   .mobile-menu {
-    display: none !important;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: var(--bg);
+  }
+
+  .mobile-menu a {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
   }
 }
 
 /* Celulares pequenos */
 @media (max-width: 480px) {
   .header__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
+    gap: 0.4rem;
+    padding: 0.5rem 0.8rem;
   }
+
+  .brand__text {
+    font-size: 0.9rem;
+  }
+
   .burger {
-    align-self: flex-end;
+    padding: 0.6rem;
+  }
+
+  .mobile-menu {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .mobile-menu a {
+    font-size: 0.9rem;
   }
 }
 
-/* Acessibilidade: foco */
-a:focus,
-button:focus {
-  outline: 3px solid rgba(108, 136, 239, 0.18);
-  outline-offset: 2px;
+/* Telas muito pequenas */
+@media (max-width: 360px) {
+  .brand__text {
+    display: none;
+  }
+
+  .mobile-menu a {
+    font-size: 0.85rem;
+  }
+}
+
+/* Desktops grandes */
+@media (min-width: 881px) {
+  .mobile-menu {
+    display: none !important;
+  }
 }

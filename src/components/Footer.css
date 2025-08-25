@@ -74,7 +74,6 @@
 /* Tablets e celulares grandes */
 @media (max-width: 768px) {
   .footer__links {
-    flex-direction: column;
     gap: 0.8rem;
   }
 
